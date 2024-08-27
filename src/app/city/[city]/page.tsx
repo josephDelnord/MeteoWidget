@@ -7,7 +7,7 @@ async function CityPage({ params }: { params: { city: string } }) {
 
 	// on peut fetch les infos direct coté server avant d'envoyer la page
 	const result = await fetch(
-		`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b2b8170ebae536abdcb1b65fd9ef1809&units=metric`,
+		`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}&units=metric`,
 	);
 	const data = (await result.json()) as Weather;
 
@@ -22,5 +22,4 @@ async function CityPage({ params }: { params: { city: string } }) {
 		</div>
 	);
 }
-
 export default CityPage;

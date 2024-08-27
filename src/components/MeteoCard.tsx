@@ -10,8 +10,9 @@ async function MeteoCard({ city }: { city: string }) {
 	console.log("execution composant MeteoCard");
 	// on veut au premier rendu du composant aller chercher la temperature sur l'API
 	// https://api.openweathermap.org/data/2.5/weather?q=montpellier&appid=47840f4f526d9cc69b4b575c52495860&units=metric
+	const API_KEY = process.env.API_KEY;
 	const result = await fetch(
-		`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b2b8170ebae536abdcb1b65fd9ef1809&units=metric`,
+		`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`,
 	);
 	const data = await result.json();
 
