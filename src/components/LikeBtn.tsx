@@ -4,13 +4,14 @@
 import { useState } from "react";
 
 function LikeBtn() {
-	const [nbLikes, setNbLikes] = useState(0);
+  const [nbLikes, setNbLikes] = useState(0);
+  console.log("rendu du btn likes");
 
-	return (
-		<button type="button" onClick={() => setNbLikes(nbLikes + 1)}>
-			{nbLikes} ❤️
-		</button>
-	);
+  return (
+    <button type="button" onClick={() => setNbLikes(nbLikes + 1)}>
+      {nbLikes} ❤️
+    </button>
+  );
 }
 
 export default LikeBtn;
