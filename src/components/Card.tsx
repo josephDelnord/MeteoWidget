@@ -5,7 +5,7 @@ import Link from "next/link";
 import LikeBtn from "./LikeBtn";
 
 // un composant server peut etre async
-async function MeteoCard({ city }: { city: string }) {
+async function Card({ city }: { city: string }) {
 	// attention les console.log sont dans le terminal coté serveur et non dans le navigateur du client
 	console.log("execution composant MeteoCard");
 	// on veut au premier rendu du composant aller chercher la temperature sur l'API
@@ -27,4 +27,4 @@ async function MeteoCard({ city }: { city: string }) {
 	);
 }
 
-export default MeteoCard;
+export default Card;

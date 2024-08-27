@@ -1,4 +1,4 @@
-import MeteoCard from "@/components/MeteoCard";
+import Card from "@/components/Card";
 
 export default function Home() {
 	console.log("execution home");
@@ -13,7 +13,7 @@ export default function Home() {
 				"La Rochelle",
 				"Montreal",
 			].map((city) => (
-				<MeteoCard city={city} key={city} />
+				<Card city={city} key={city} />
 			))}
 
 			{/* 
